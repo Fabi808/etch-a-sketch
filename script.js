@@ -1,11 +1,10 @@
+const grid = document.querySelector("#grid");
 function createGrid(numSqaures = 16) {
-  const grid = document.querySelector("#grid");
   for (let i = 0; i < numSqaures; i++) {
-    const gridRow = document.createElement("div");
-    grid.appendChild(gridRow);
-    for (let i = 0; i < numSqaures; i++) {
-      const gridSquare = document.createElement("div");
-      gridSquare.appendChild(gridSquare);
-    }
+    const square = document.createElement("div");
+    grid.appendChild(square);
+    square.style.border = "1px solid black";
   }
 }
+
+createGrid();
